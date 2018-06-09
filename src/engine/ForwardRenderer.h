@@ -6,6 +6,7 @@
 
 #include "Renderer.h"
 #include "Shader.h"
+#include "RenderTarget.h"
 
 class ForwardRenderer : public Renderer
 {
@@ -22,4 +23,7 @@ private:
   std::unique_ptr<Shader> m_forwardDirectional;
   std::unique_ptr<Shader> m_forwardPoint;
   std::unique_ptr<Shader> m_forwardSpot;
+  std::unique_ptr<Shader> m_shadowMap;
+
+  
 };

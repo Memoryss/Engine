@@ -179,4 +179,7 @@ void ForwardRenderer::createShaders()
   m_forwardSpot->setUniform1i("diffuseMap", 0);
   m_forwardSpot->setUniform1i("normalMap", 1);
   m_forwardSpot->setUniform1i("specularMap", 2);
+
+  //shadow map
+  m_shadowMap = std::make_unique<Shader>("shaders/shadow-map");
 }
